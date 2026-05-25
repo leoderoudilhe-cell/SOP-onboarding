@@ -340,36 +340,7 @@ footer{
     </div>
     <div class="sec-divider"></div>
 
-    <div class="q-block">
-      <label class="q-label">Réseaux actifs — donne ton @ pour chacun</label>
-      <div class="q-hint">Laisse vide si tu n'as pas le réseau.</div>
-      <div class="socials-grid" style="margin-top:8px">
-        <div class="social-field">
-          <div class="social-label"><span>📸</span> Instagram</div>
-          <input type="text" id="s_ig" placeholder="@...">
-        </div>
-        <div class="social-field">
-          <div class="social-label"><span>🎵</span> TikTok</div>
-          <input type="text" id="s_tt" placeholder="@...">
-        </div>
-        <div class="social-field">
-          <div class="social-label"><span>𝕏</span> Twitter/X</div>
-          <input type="text" id="s_tw" placeholder="@...">
-        </div>
-        <div class="social-field">
-          <div class="social-label"><span>📘</span> Facebook</div>
-          <input type="text" id="s_fb" placeholder="@...">
-        </div>
-        <div class="social-field">
-          <div class="social-label"><span>🌐</span> Snapchat</div>
-          <input type="text" id="s_sc" placeholder="@...">
-        </div>
-        <div class="social-field">
-          <div class="social-label"><span>🔗</span> Autre</div>
-          <input type="text" id="s_other" placeholder="@...">
-        </div>
-      </div>
-    </div>
+
 
     <div class="q-block">
       <label class="q-label">Audience totale actuelle (tous réseaux confondus)</label>
@@ -664,12 +635,12 @@ function collectData(){
     pseudo_other: getVal('pseudo_other'),
     telephone: getVal('phone'),
     email: getVal('email'),
-    instagram: getVal('s_ig'),
-    tiktok: getVal('s_tt'),
-    twitter: getVal('s_tw'),
-    facebook: getVal('s_fb'),
-    snapchat: getVal('s_sc'),
-    autre_reseau: getVal('s_other'),
+    instagram: getVal('pseudo_ig'),
+    tiktok: getVal('pseudo_tt'),
+    twitter: getVal('pseudo_tw'),
+    facebook: '',
+    snapchat: '',
+    autre_reseau: getVal('pseudo_other'),
     audience: getSel('q_audience'),
     langues: getMulti('q_langs'),
     marche: getSel('q_market'),
