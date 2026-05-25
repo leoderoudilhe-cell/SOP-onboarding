@@ -284,36 +284,7 @@ footer{
       <input type="text" id="prenom" placeholder="Ton prénom…">
       <div class="error-msg" id="err-prenom">Ce champ est requis.</div>
     </div>
-    <div class="q-block">
-      <label class="q-label">Pseudos utilisés<span class="q-required">*</span></label>
-      <div class="socials-grid" style="margin-top:8px">
-        <div class="social-field">
-          <div class="social-label">OnlyFans</div>
-          <input type="text" id="pseudo_of" placeholder="@...">
-        </div>
-        <div class="social-field">
-          <div class="social-label">MYM</div>
-          <input type="text" id="pseudo_mym" placeholder="@...">
-        </div>
-        <div class="social-field">
-          <div class="social-label">TikTok</div>
-          <input type="text" id="pseudo_tt" placeholder="@...">
-        </div>
-        <div class="social-field">
-          <div class="social-label">Instagram</div>
-          <input type="text" id="pseudo_ig" placeholder="@...">
-        </div>
-        <div class="social-field">
-          <div class="social-label">Twitter / X</div>
-          <input type="text" id="pseudo_tw" placeholder="@...">
-        </div>
-        <div class="social-field">
-          <div class="social-label">Autre</div>
-          <input type="text" id="pseudo_other" placeholder="@...">
-        </div>
-      </div>
-      <div class="error-msg" id="err-pseudo">Remplis au moins un pseudo.</div>
-    </div>
+
     <div class="q-block">
       <label class="q-label">Numéro de téléphone<span class="q-required">*</span></label>
       <div class="q-hint">WhatsApp ou principal</div>
@@ -340,7 +311,36 @@ footer{
     </div>
     <div class="sec-divider"></div>
 
-
+    <div class="q-block">
+      <label class="q-label">Tes pseudos sur chaque plateforme</label>
+      <div class="q-hint">Laisse vide si tu n'as pas le compte.</div>
+      <div class="socials-grid" style="margin-top:8px">
+        <div class="social-field">
+          <div class="social-label">OnlyFans</div>
+          <input type="text" id="pseudo_of" placeholder="@...">
+        </div>
+        <div class="social-field">
+          <div class="social-label">MYM</div>
+          <input type="text" id="pseudo_mym" placeholder="@...">
+        </div>
+        <div class="social-field">
+          <div class="social-label">TikTok</div>
+          <input type="text" id="pseudo_tt" placeholder="@...">
+        </div>
+        <div class="social-field">
+          <div class="social-label">Instagram</div>
+          <input type="text" id="pseudo_ig" placeholder="@...">
+        </div>
+        <div class="social-field">
+          <div class="social-label">Twitter / X</div>
+          <input type="text" id="pseudo_tw" placeholder="@...">
+        </div>
+        <div class="social-field">
+          <div class="social-label">Autre</div>
+          <input type="text" id="pseudo_other" placeholder="@...">
+        </div>
+      </div>
+    </div>
 
     <div class="q-block">
       <label class="q-label">Audience totale actuelle (tous réseaux confondus)</label>
@@ -611,11 +611,7 @@ function validateSection0(){
       err.classList.remove('show');
     }
   });
-  // At least one pseudo
-  const pseudos = ['pseudo_of','pseudo_mym','pseudo_tt','pseudo_ig','pseudo_tw','pseudo_other'];
-  const hasPseudo = pseudos.some(id=>{ const el=document.getElementById(id); return el&&el.value.trim(); });
-  const errP = document.getElementById('err-pseudo');
-  if(!hasPseudo){ errP.classList.add('show'); ok=false; } else { errP.classList.remove('show'); }
+
   return ok;
 }
 
